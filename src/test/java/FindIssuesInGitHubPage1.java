@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class findIssuesInGitHubPage1 {
+public class FindIssuesInGitHubPage1 {
 
     public static final String USSEARCH = "мотобол";
 
@@ -34,4 +34,18 @@ public class findIssuesInGitHubPage1 {
 
         sleep(2000);
     }
+
+    @Test
+    void findIssuesOnClearSelenideWithStepsClass() {
+
+        FindIssuesInGitHubPage2WithSteps findIssuesInGitHubPage2WithSteps = new FindIssuesInGitHubPage2WithSteps();
+
+        findIssuesInGitHubPage2WithSteps.openPage();
+        findIssuesInGitHubPage2WithSteps.clickOnSearchInput();
+        findIssuesInGitHubPage2WithSteps.setValueInSearchInput(USSEARCH);
+        findIssuesInGitHubPage2WithSteps.checkByString(USSEARCH);
+        findIssuesInGitHubPage2WithSteps.openPage();
+
+    }
+
 }

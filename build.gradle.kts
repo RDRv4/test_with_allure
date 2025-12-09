@@ -12,7 +12,7 @@ allure {
         version.set("2.19.0")
     }
     adapter { // ответчат за появление папки allure-res
-        aspectjWeaver.set(true)
+        aspectjWeaver.set(true) // обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
                 adapterVersion.set("2.19.0")
